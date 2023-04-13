@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>download</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+   .title{
+     margin-left: 630px;
+     margin-right: auto;
+     margin-top:320px;
+     width: 756px;
+     height: 58px;
+     font-family: fantasy;
+     font-style: normal;
+     font-size: 35px;
+     line-height: 58px;
+     color: #000000;
+     }
+   .name{
+     position: absolute;
+     width: 456px;
+     height: 58px;
+     left: 700px;
+     top: 95px;
+     font-family: fantasy;
+     font-style: normal;
+     font-size: 65px;
+     line-height: 58px;
+     color: #000000;
+     }
+   .btnmp4{
+      margin-left:980px;
+      margin-top:130px;
+      }
+   .btnmp3{
+      margin-left:780px;
+      margin-top:-47px;
+      }
+
+
+</style>
+<body>
+<div class="name">
+    <p><a>YotubeDownloader</a></p>
+</div>
+
+<div class="title">
+   <p>{{title}}</p>
+</div>
+<div class="btnmp4">
+    <form action="{done}" method="post">
+        {% csrf_token %}
+           <input type="submit" class="btn btn-primary btn-lg" value="Скачать MP4">
+      </form>
+          </div>
+             <div class="btnmp3">
+                <form action="{mp3}" method="post">
+                    {% csrf_token %}
+                      <input type="submit" class="btn btn-secondary btn-lg" value="Скачать MP3">
+                 </form>
+            </div>
+       </body>
+</html>
